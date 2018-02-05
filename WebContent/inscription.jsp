@@ -53,7 +53,7 @@
 									</div>
 									<div>
 										<select name="role">
-											<option value="user">User</option>
+											<option value="user" selected>User</option>
 											<option value="admin">Admin</option>
 										</select>
 									</div>

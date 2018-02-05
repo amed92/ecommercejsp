@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ecommerce.Application;
+import ecommerce.dao.LoginDao;
+import ecommerce.model.Login;
+import ecommerce.model.Role;
+
 /**
  * Servlet implementation class InscriptionServlet
  */
@@ -29,13 +34,28 @@ public class InscriptionServlet extends HttpServlet {
 		System.out.println("Inscription using get");
 		request.getSession().setAttribute("inscription", "0");
 		request.getSession().setAttribute("errorMessage", "User form to sign up");
-		request.getRequestDispatcher("login.jsp").include(request, response);
+		request.getRequestDispatcher("inscription.jsp").include(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String userLogin = request.getParameter("login");
+		String userPwd = request.getParameter("password");
+		String role = request.getParameter("role");
+		
+		Login login = new Login(userLogin, userPwd, ("user".equals(role) ? Role.USER : Role.ADMIN));
+		LoginDao loginDao = Application.getInstance().getLoginDao();
+		
+		if (loginDao.findLoginByLogin(login.getLogin()) != null) {
+			loginDao.create(login);
+			response.sendRedirect("login.jsp");
+		} else {
+			request.setAttribute("inscription", "0");
+			request.setAttribute("errorMessage", "Login already exists");
+			request.getRequestDispatcher("inscription.jsp").include(request, response);
+		}
 	}
 
 }
