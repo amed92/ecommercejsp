@@ -48,7 +48,7 @@ public class InscriptionServlet extends HttpServlet {
 		Login login = new Login(userLogin, userPwd, ("user".equals(role) ? Role.USER : Role.ADMIN));
 		LoginDao loginDao = Application.getInstance().getLoginDao();
 		
-		if (loginDao.findLoginByLogin(login.getLogin()) != null) {
+		if (loginDao.findLoginByLogin(login.getLogin()) == null) {
 			loginDao.create(login);
 			response.sendRedirect("login.jsp");
 		} else {

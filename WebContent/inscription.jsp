@@ -29,7 +29,7 @@
 								<h3 class="mb-0">Inscription</h3>
 							</div>
 							<div class="card-body">
-								<form class="form" method="post" role="form" autocomplete="off" id="formLogin">
+								<form action="InscriptionServlet" class="form" method="post" role="form" autocomplete="off" id="formLogin">
 									<div class="form-group">
 										<label for="uname1">Username</label>
 										<input
@@ -57,7 +57,7 @@
 											<option value="admin">Admin</option>
 										</select>
 									</div>
-									<button type="button" class="btn btn-success btn-lg float-right">Login</button>
+									<button type="submit" class="btn btn-success btn-lg float-right">Login</button>
 								</form>
 							</div>
 							<!--/card-block-->

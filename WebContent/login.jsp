@@ -37,7 +37,7 @@
 								<h3 class="mb-0">Login</h3>
 							</div>
 							<div class="card-body">
-								<form class="form" method="post" role="form" autocomplete="off"
+								<form action="LoginServlet" class="form" method="post" role="form" autocomplete="off"
 									id="formLogin">
 									<div class="form-group">
 										<label for="uname1">Username</label>
@@ -61,7 +61,7 @@
 										>
 									</div>
 									<div></div>
-									<button type="button" class="btn btn-success btn-lg float-right">Login</button>
+									<button type="submit" class="btn btn-success btn-lg float-right">Login</button>
 								</form>
 							</div>
 							<!--/card-block-->
