@@ -28,8 +28,8 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Login using get");
-		request.setAttribute("connected", "0");
-		request.setAttribute("errorMessage", "User form to connect");
+		request.getSession().setAttribute("connected", "0");
+		request.getSession().setAttribute("errorMessage", "User form to connect");
 		request.getRequestDispatcher("login.jsp").include(request, response);
 	}
 
@@ -48,8 +48,8 @@ public class LoginServlet extends HttpServlet {
 			request.getRequestDispatcher("produit.jsp").include(request, response);
 		} else {
 			System.out.println("Wrong username and or password: " + userLogin + ", " + userPwd);
-			request.setAttribute("connected", "0");
-			request.setAttribute("errorMessage", "Wrong username and or password");
+			request.getSession().setAttribute("connected", "0");
+			request.getSession().setAttribute("errorMessage", "Wrong username and or password");
 			request.getRequestDispatcher("login.jsp").include(request, response);
 		}
 	}
