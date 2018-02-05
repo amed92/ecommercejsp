@@ -27,10 +27,6 @@
 							<div class="card-header">
 								<h3 class="mb-0">Login</h3>
 							</div>
-							<select>Role
-								<option>Admin</option>
-								<option>User</option>
-							</select>
 							<div class="card-body">
 								<form class="form" role="form" autocomplete="off" id="formLogin">
 									<div class="form-group">
