@@ -10,37 +10,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>Product</title>
+    <title>Books Store Application</title>
 </head>
 <body>
     <center>
-        <h1>Produit</h1>
+        <h1>Utilisateur</h1>
         <h2>
-            <a href="/new">Add New Product</a>
+            <a href="/new">Add New User</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/list">List All Product</a>
+            <a href="/list">List All User</a>
              
         </h2>
     </center>
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h2>List of Product</h2></caption>
+            <caption><h2>List of User</h2></caption>
             <tr>
                 <th>ID</th>
-                <th>Description</th>
-                <th>Prix</th>
-                <th>stock</th>
+                <th>Login</th>
+                <th>Password</th>
             </tr>
-            <c:forEach var="book" items="${listProduct}">
+            <c:forEach var="book" items="${listUtilisateur}">
                 <tr>
-                    <td><c:out value="${produit.id}" /></td>
-                    <td><c:out value="${produit.descritpion}" /></td>
-                    <td><c:out value="${produit.prix}" /></td>
-                    <td><c:out value="${produit.stock}" /></td>
+                    <td><c:out value="${utilisateur.id}" /></td>
+                    <td><c:out value="${utilisateur.login}" /></td>
+                    <td><c:out value="${utilisateur.pwd}" /></td>
                     <td>
-                        <a href="/edit?id=<c:out value='${produit.id}' />">Edit</a>
+                        <a href="/edit?id=<c:out value='${utilisateur.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/delete?id=<c:out value='${produit.id}' />">Delete</a>                     
+                        <a href="/delete?id=<c:out value='${utilisateur.id}' />">Delete</a>                     
                     </td>
                 </tr>
             </c:forEach>

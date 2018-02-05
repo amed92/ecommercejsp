@@ -1,11 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.List"%>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
 	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
 	crossorigin="anonymous">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -23,14 +27,19 @@
 						<!-- form card login -->
 						<div class="card rounded-0">
 							<div class="card-header">
-		  <c:if test="${requestScope.connected != null && requestScope.connected.equals("0")}">
-                    <c:out value="${requestScope.errorMessage}" />
-                </c:if>
+
+								<div style="color: red">
+									<c:if
+										test="${requestScope.connected != null && requestScope.connected.equals("0")}">
+										<c:out value="${requestScope.errorMessage}" />
+									</c:if>
+								</div>
 
 								<h3 class="mb-0">Login</h3>
 							</div>
 							<div class="card-body">
-								<form class="form" method= "POST" role="form" autocomplete="off" id="formLogin">
+								<form class="form" method="post" role="form" autocomplete="off"
+									id="formLogin">
 									<div class="form-group">
 										<label for="uname1">Username</label> <input type="text"
 											class="form-control form-control-lg rounded-0" name="uname1"
@@ -41,9 +50,7 @@
 											class="form-control form-control-lg rounded-0" id="pwd1"
 											required="" autocomplete="new-password">
 									</div>
-									<div>
-
-									</div>
+									<div></div>
 									<button type="button"
 										class="btn btn-success btn-lg float-right">Login</button>
 								</form>
