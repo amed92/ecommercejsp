@@ -14,11 +14,8 @@
 <body>
 
 	<h1>Accueil</h1>
-	<a href="login.jsp">Login</a>
-	<a href="inscription.jsp">Inscription</a>
-	<br />
 
-<c:choose>
+	<c:choose>
 		<c:when
 			test="${sessionScope.connected.equals('1')}">
 			<a href="produit.jsp">produit</a>
