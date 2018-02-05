@@ -57,7 +57,7 @@
 											<option value="admin">Admin</option>
 										</select>
 									</div>
-									<button type="button" class="btn btn-success btn-lg float-right">Login</button>
+									<button type="submit" class="btn btn-success btn-lg float-right">Login</button>
 								</form>
 							</div>
 							<!--/card-block-->
