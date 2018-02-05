@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
 		if (authDao.login()) {
 			request.getSession().setAttribute("connected", "1");
 			request.getSession().setAttribute("sessionLogin", userLogin);
-			request.getRequestDispatcher("accueil.jsp").include(request, response);
+			request.getRequestDispatcher("Accueil.jsp").include(request, response);
 		} else {
 			System.out.println("Wrong username and or password: " + userLogin + ", " + userPwd);
 			request.getSession().setAttribute("connected", "0");
