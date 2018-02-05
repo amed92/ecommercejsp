@@ -10,14 +10,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Inscription</title>
 </head>
 <body>
 
 	<div class="container py-5">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="text-center text-white mb-4">Bootstrap 4 Login Form</h2>
+				<h2 class="text-center text-white mb-4">Inscription Form</h2>
 				<div class="row">
 					<div class="col-md-6 mx-auto">
 						<span class="anchor" id="formLogin"></span>
@@ -40,6 +40,10 @@
 											required="" autocomplete="new-password">
 									</div>
 									<div>
+										<select>Role
+										<option>User</option>
+										<option>Admin</option>
+										</select>
 
 									</div>
 									<button type="button"
