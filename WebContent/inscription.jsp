@@ -29,7 +29,7 @@
 								<h3 class="mb-0">Inscription</h3>
 							</div>
 							<div class="card-body">
-								<form class="form" role="form" autocomplete="off" id="formLogin">
+								<form class="form" method="post" role="form" autocomplete="off" id="formLogin">
 									<div class="form-group">
 										<label for="uname1">Username</label>
 										<input
@@ -52,9 +52,9 @@
 										>
 									</div>
 									<div>
-										<select>
-											<option>User</option>
-											<option>Admin</option>
+										<select name="role">
+											<option value="user">User</option>
+											<option value="admin">Admin</option>
 										</select>
 									</div>
 									<button type="button" class="btn btn-success btn-lg float-right">Login</button>
