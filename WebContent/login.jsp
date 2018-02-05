@@ -29,10 +29,10 @@
 							<div class="card-header">
 
 								<div style="color: red">
-									<c:if
+							<%-- 		<c:if
 										test="${requestScope.connected != null && requestScope.connected.equals("0")}">
 										<c:out value="${requestScope.errorMessage}" />
-									</c:if>
+									</c:if> --%>
 								</div>
 
 								<h3 class="mb-0">Login</h3>
