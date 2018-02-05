@@ -5,21 +5,29 @@
 <head>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.List"%>
+
 <title>Home</title>
 </head>
 <body>
 
-<h1>Accueil</h1>  
-<a href="login.jsp">Login</a>
-<a href="inscription.jsp">Inscription</a><br />
+	<h1>Accueil</h1>
 
-<c:if test=${requestScope.connected != null && requestScope.connected = 1 } >
-
-<a href = "produit.jsp">produit</a>
-<a href = "utilisateur.jsp">utilisateur</a>
-
+	<c:choose>
+		<c:when
+			test="${sessionScope.connected.equals('1')}">
+			<a href="produit.jsp">produit</a>
+			<a href="utilisateur.jsp">utilisateur</a>
+			<a href="LogoutServlet">deconnexion</a>
+		</c:when>
+		<c:otherwise>
+			<a href="login.jsp">Login</a>
+			<a href="inscription.jsp">Inscription</a>
+			<br />
+		</c:otherwise>
+	</c:choose>
 
 
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
