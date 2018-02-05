@@ -23,10 +23,14 @@
 						<!-- form card login -->
 						<div class="card rounded-0">
 							<div class="card-header">
+		  <c:if test="${requestScope.connected != null && requestScope.connected.equals("0")}">
+                    <c:out value="${requestScope.errorMessage}" />
+                </c:if>
+
 								<h3 class="mb-0">Login</h3>
 							</div>
 							<div class="card-body">
-								<form class="form" role="form" autocomplete="off" id="formLogin">
+								<form class="form" method= "POST" role="form" autocomplete="off" id="formLogin">
 									<div class="form-group">
 										<label for="uname1">Username</label> <input type="text"
 											class="form-control form-control-lg rounded-0" name="uname1"

@@ -7,11 +7,11 @@
 </head>
 <body>
     <center>
-        <h1>Books Management</h1>
+        <h1>Produit</h1>
         <h2>
-            <a href="/new">Add New Book</a>
+            <a href="/new">Add New Product</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/list">List All Books</a>
+            <a href="/list">List All Product</a>
              
         </h2>
     </center>
@@ -20,21 +20,20 @@
             <caption><h2>List of Books</h2></caption>
             <tr>
                 <th>ID</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Price</th>
-                <th>Actions</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>stock</th>
             </tr>
             <c:forEach var="book" items="${listBook}">
                 <tr>
-                    <td><c:out value="${book.id}" /></td>
-                    <td><c:out value="${book.title}" /></td>
-                    <td><c:out value="${book.author}" /></td>
-                    <td><c:out value="${book.price}" /></td>
+                    <td><c:out value="${produit.id}" /></td>
+                    <td><c:out value="${produit.descritpion}" /></td>
+                    <td><c:out value="${produit.prix}" /></td>
+                    <td><c:out value="${produit.stock}" /></td>
                     <td>
-                        <a href="/edit?id=<c:out value='${book.id}' />">Edit</a>
+                        <a href="/edit?id=<c:out value='${produit.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/delete?id=<c:out value='${book.id}' />">Delete</a>                     
+                        <a href="/delete?id=<c:out value='${produit.id}' />">Delete</a>                     
                     </td>
                 </tr>
             </c:forEach>
