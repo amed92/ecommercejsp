@@ -7,7 +7,6 @@
 	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
 	crossorigin="anonymous">
 
-<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Inscription</title>
@@ -25,7 +24,7 @@
 						<!-- form card login -->
 						<div class="card rounded-0">
 							<div class="card-header">
-								<h3 class="mb-0">Login</h3>
+								<h3 class="mb-0">Inscription</h3>
 							</div>
 							<div class="card-body">
 								<form class="form" role="form" autocomplete="off" id="formLogin">
