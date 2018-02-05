@@ -27,6 +27,10 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Login using get");
+		request.setAttribute("connected", "0");
+		request.setAttribute("errorMessage", "User form to connect");
+		request.getRequestDispatcher("login.jsp").include(request, response);
 	}
 
 	/**
