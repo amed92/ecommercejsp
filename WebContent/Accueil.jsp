@@ -12,28 +12,15 @@
 <body>
 
 <h1>Accueil</h1>  
-<a href="login.jsp">Login</a>|  
-<a href="inscription.jsp">Inscription</a>
+<a href="login.jsp">Login</a>
+<a href="inscription.jsp">Inscription</a><br />
 
-<%-- <c:if test=${requestScope.connected != null && requestScope.connected = 1 } >
- --%>
-<form class="form-inline" action="produit.jsp">
-  <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
-  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-    <option selected>Choose...</option>
-    <option value="">Produit</option>
-    <option value="">User</option>
-    <option value="">Three</option>
-  </select>
+<c:if test=${requestScope.connected != null && requestScope.connected = 1 } >
 
-  <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-    <input type="checkbox" class="custom-control-input">
-    <span class="custom-control-indicator"></span>
-    <span class="custom-control-description">Remember my preference</span>
-  </label>
+<a href = "produit.jsp">produit</a>
+<a href = "utilisateur.jsp">utilisateur</a>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
 
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
 		integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
