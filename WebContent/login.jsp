@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.List"%>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-	crossorigin="anonymous">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<%@ page import="java.util.List"%>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+		crossorigin="anonymous">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Login</title>
 </head>
 <body>
 
 	<div class="container py-5">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="text-center text-white mb-4">Bootstrap 4 Login Form</h2>
+				<h2 class="text-center text-white mb-4">Ecommercejsp login</h2>
 				<div class="row">
 					<div class="col-md-6 mx-auto">
 						<span class="anchor" id="formLogin"></span>
@@ -41,18 +40,28 @@
 								<form class="form" method="post" role="form" autocomplete="off"
 									id="formLogin">
 									<div class="form-group">
-										<label for="uname1">Username</label> <input type="text"
-											class="form-control form-control-lg rounded-0" name="uname1"
-											id="uname1" required="">
+										<label for="uname1">Username</label>
+										<input
+											type="text"
+											class="form-control form-control-lg rounded-0"
+											name="login"
+											id="uname1"
+											required
+										>
 									</div>
 									<div class="form-group">
-										<label>Password</label> <input type="password"
-											class="form-control form-control-lg rounded-0" id="pwd1"
-											required="" autocomplete="new-password">
+										<label>Password</label>
+										<input
+											type="password"
+											class="form-control form-control-lg rounded-0"
+											name="password"
+											id="pwd1"
+											autocomplete="new-password"
+											required
+										>
 									</div>
 									<div></div>
-									<button type="button"
-										class="btn btn-success btn-lg float-right">Login</button>
+									<button type="button" class="btn btn-success btn-lg float-right">Login</button>
 								</form>
 							</div>
 							<!--/card-block-->
