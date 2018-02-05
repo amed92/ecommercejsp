@@ -44,7 +44,7 @@
 										<input
 											type="text"
 											class="form-control form-control-lg rounded-0"
-											name="uname1"
+											name="login"
 											id="uname1"
 											required
 										>
