@@ -34,7 +34,9 @@ public class LogoutServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		request.getSession().setAttribute("connected", "0");
+		request.getSession().invalidate();
+		response.sendRedirect("Accueil.jsp");
 	}
 
 }
